@@ -41,8 +41,19 @@ function winCondition () {
     }
 }
 
-alert (`Welcome to the landscaper simulation`)
+alert (`Welcome to the landscaper simulation!!`)
 
-While (!player.wonGame) {
-    por
+while (!player.wonGame) {
+    const response = prompt (`You currently have ${player.money} dollars [m]ow lawns or [u]pgrade? `)
+    if (response === 'm'){
+        mowLawn()
+    }
+    if (response === 'u'){
+        upgrade()
+    }
+    if (response !== 'm' && response !=='u'){
+        alert('Slayyy!! But this is not a vaild option. You gotta bills to pay. Type [m] or [u].')
+    }
+    winCondition()
 }
+    
