@@ -35,7 +35,7 @@ function upgrade() {
 }
 
 function winCondition () {
-    if (player.money >= 50 && player.tool === tools.length - 1) {
+    if (player.money >= 1000 && player.tool === tools.length - 1) {
         alert (`Congrats!!! You have recuilted a team and accumulated 1000 dollars. You have won the game!!!`)
         player.wonGame = true
     }
