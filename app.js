@@ -24,7 +24,7 @@ function upgrade() {
     if (player.tool + 1 < tools.length){
         const nextTool = tools[player.tool + 1]
         if (nextTool.price <= player.money) {
-            money -= nextTool.price
+            player.money -= nextTool.price
             player.tool += 1
         } else {
             alert(`Money is not enough for this upgrade.`)
@@ -36,7 +36,7 @@ function upgrade() {
 
 function winCondition () {
     if (player.money >= 50 && player.tool === tools.length - 1) {
-        alert (`Congrats!!! You have accumulated 1000 dollars. You have won the game`)
+        alert (`Congrats!!! You have recuilted a team and accumulated 1000 dollars. You have won the game!!!`)
         player.wonGame = true
     }
 }
